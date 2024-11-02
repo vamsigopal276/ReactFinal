@@ -1,0 +1,88 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} 
+
+.link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* General styles for the navigation container */
+nav {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(100deg,pink, #0482ac); /* Attractive blue gradient */
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow below the navbar */
+  border-radius: 10px; /* Slight rounded corners for modern look */
+}
+
+/* Style for all links */
+nav a {
+  text-decoration: none;
+  color: white;                /* White text for the links */
+  padding: 12px 25px;          /* More padding for larger buttons */
+  font-size: 18px;             /* Larger font size */
+  margin: 0 15px;              /* Space between the links */
+  border-radius: 15px;         /* Full-rounded buttons */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  transition: all 0.3s ease-in-out; /* Smooth hover and click effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+
+/* Hover effect for the links */
+nav a:hover {
+  background-color:rgb(243, 55, 118);      /* Bright orange on hover */
+  color: white;                   /* Keep text white */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: translateY(-3px);    /* Slight lift effect on hover */
+}
+
+/* Active link style */
+nav a.active {
+  background-color: #4caf50;
+}
