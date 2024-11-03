@@ -36,7 +36,33 @@ const cartSlice=createSlice({
             else{
                 state.push({...action.payload,quantity:1});
             }
+        },
+        increment:(state,action)=>{
+            const item=state.find(item=>item.name===action.payload.name);
+            if(item)
+            {
+                item.quantity+=1;
+            }
+        },
+        decrement:(state,action)=>{
+            const item=state.find((item) =>item.name===action.payload.name);
+            if(item && item.quantity>1)
+            {
+                item.quantity-=1;
+            }
+            else
+            {
+             return (state.filter(item=>item.name!=action.payload.name))
+            }
+        },
+        remove:(state,action)=>{
+            const item=state.find((item)=>item.name===action.payload.name);
+            if(item)
+            {
+                return(state.filter((item)=>item.name!=action.payload.name));
+            }
         }
+
     }
 })
 
@@ -51,4 +77,4 @@ const store=configureStore(
     })
 
 export default store;
-export const {addToCart}=cartSlice.actions;
+export const {addToCart,increment,decrement,remove}=cartSlice.actions;

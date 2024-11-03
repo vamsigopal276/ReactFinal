@@ -9,6 +9,10 @@ import Home from "./Home";
 
 import'./App.css';
 import { useSelector } from "react-redux";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import GoogleLoginComponent from "./GoogleLoginComponent";
+import FacebookLoginComponent from "./FacebookLoginComponent";
+
 
 function App()
 {
@@ -17,6 +21,10 @@ function App()
    
   return(
     <>
+    <GoogleOAuthProvider clientId="371554755551-ppr6bsiupmkh6up2gcpsq02d5ummnmv3.apps.googleusercontent.com">
+      <GoogleLoginComponent/>
+    </GoogleOAuthProvider>
+    <FacebookLoginComponent />
     
     <BrowserRouter>
     <nav>
