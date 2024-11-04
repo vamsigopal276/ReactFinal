@@ -4,7 +4,8 @@ function Home()
 {
     return (
         <>
-          <h1>This is Home page</h1>  
+          <h1>This is Home page</h1> 
+          <h2>this is modification page</h2> 
         </>
     );
 }
