@@ -6,6 +6,7 @@ function Home()
         <>
           <h1>This is Home page</h1> 
           <h2>this is modification page</h2> 
+          <h2>this is second modify</h2>
         </>
     );
 }
