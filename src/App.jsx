@@ -12,6 +12,7 @@ import { useSelector } from "react-redux";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import GoogleLoginComponent from "./GoogleLoginComponent";
 import FacebookLoginComponent from "./FacebookLoginComponent";
+import NotFound from "./NotFound";
 
 
 function App()
@@ -24,8 +25,9 @@ function App()
     <GoogleOAuthProvider clientId="371554755551-ppr6bsiupmkh6up2gcpsq02d5ummnmv3.apps.googleusercontent.com">
       <GoogleLoginComponent/>
     </GoogleOAuthProvider>
+    <br />
     <FacebookLoginComponent />
-    
+    <br />
     <BrowserRouter>
     <nav>
     <Link to="/home">Home</Link>
@@ -44,6 +46,7 @@ function App()
        <Route path="/cart" element={<Cart/>}/>
        <Route path="/Aboutus" element={<AboutUs/>}/>
        <Route path="/Contactus" element={<ContactUs/>}/>
+       <Route path="*" element={<NotFound/>}/>
 
     </Routes>
 
